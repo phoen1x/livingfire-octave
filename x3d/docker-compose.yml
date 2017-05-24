@@ -1,0 +1,21 @@
+version: '2.1'
+
+services:
+
+    apache:
+        image: httpd
+        ports:
+            - "$PORT_HTTP"
+        volumes:
+            - "$VOLUME_APACHE_HTDOCS"
+
+networks:
+    default:
+        driver: bridge
+        driver_opts:
+            com.docker.network.enable_ipv6: "false"
+            com.docker.network.bridge.name: "$NETWORK_BRIDGE"
+        ipam:
+            driver: default
+            config:
+                - subnet: "$NETWORK_SUBNET"

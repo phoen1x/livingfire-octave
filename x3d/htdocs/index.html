@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='x3dom/x3dom.css'></link>
+    <script type='text/javascript' src='x3dom/x3dom.js'></script>
+</head>
+
+<body>
+    <script>
+        function changeTexture(textureId) {
+            var textures = [
+                "texture/texture-abstract.jpg",
+                "texture/texture-balloon-envelope.jpg",
+                "texture/texture-bricks.jpg",
+                "texture/texture-building.jpg",
+                "texture/texture-chihuly.jpg",
+                "texture/texture-coffee01.jpg",
+                "texture/texture-coffee03.jpg",
+                "texture/texture-cube.jpg",
+                "texture/texture-curves.jpg",
+                "texture/texture-dna01.jpg",
+                "texture/texture-dna02.jpg",
+                "texture/texture-fabric01.jpg",
+                "texture/texture-fabric02.jpg",
+                "texture/texture-fabric03.jpg",
+                "texture/texture-fire01.jpg",
+                "texture/texture-fire02.jpg",
+                "texture/texture-fire03.jpg",
+                "texture/texture-fire04.jpg",
+                "texture/texture-fire05.jpg",
+                "texture/texture-fire06.jpg",
+                "texture/texture-fire07.jpg",
+                "texture/texture-fire08.jpg",
+                "texture/texture-fire09.jpg",
+                "texture/texture-fire10.jpg",
+                "texture/texture-fire11.jpg",
+                "texture/texture-fire12.jpg",
+                "texture/texture-fire13.jpg",
+                "texture/texture-fire14.jpg",
+                "texture/texture-fire15.jpg",
+                "texture/texture-fire16.jpg",
+                "texture/texture-fire17.jpg",
+                "texture/texture-letters.jpg",
+                "texture/texture-matrix01.jpg",
+                "texture/texture-matrix03.jpg",
+                "texture/texture-matrix04.jpg",
+                "texture/texture-matrix06.jpg",
+                "texture/texture-matrix07.jpg",
+                "texture/texture-matrix08.jpg",
+                "texture/texture-matrix09.jpg",
+                "texture/texture-nudels.jpg",
+                "texture/texture-pencils.jpg",
+                "texture/texture-phoenix01.jpg",
+                "texture/texture-phoenix02.jpg",
+                "texture/texture-plant01.jpg",
+                "texture/texture-plant02.jpg",
+                "texture/texture-plant03.jpg",
+                "texture/texture-plasma-blue.jpg",
+                "texture/texture-plasma-red.jpg",
+                "texture/texture-pulse.jpg",
+                "texture/texture-rope.jpg",
+                "texture/texture-sandstone.jpg",
+                "texture/texture-scales.jpg",
+                "texture/texture-sea.jpg",
+                "texture/texture-seamless02.jpg",
+                "texture/texture-seamless04.jpg",
+                "texture/texture-seamless06.jpg",
+                "texture/texture-seamless08.jpg",
+                "texture/texture-seamless09.jpg",
+                "texture/texture-seamless10.jpg",
+                "texture/texture-tiles01.jpg",
+                "texture/texture-tiles02.jpg",
+                "texture/texture-tiles03.jpg",
+                "texture/texture-tiles04.jpg",
+                "texture/texture-umbrellas.jpg",
+                "texture/texture-vintage.jpg",
+                "texture/texture-water01.jpg",
+                "texture/texture-water02.jpg",
+                "texture/texture-water03.jpg",
+                "texture/texture-water04.jpg",
+                "texture/texture-woman01.jpg",
+                "texture/texture-woman02.jpg"
+            ];
+
+            var textureIdNext = 0;
+            if (textureId < (textures.length - 1)) {
+                textureIdNext = textureId + 1;
+            }
+
+            document.getElementById('Logo__MA_Texture').setAttribute('url', textures[textureIdNext]);
+            return textureIdNext;
+        }
+        var textureId = 0;
+        window.setInterval(function() {
+            textureId = changeTexture(textureId)
+        }, 8000);
+    </script>
+    <div style="width:800px; margin:0 auto;">
+        <x3d width='800px' height='800px'>
+            <scene>
+                <inline nameSpaceName="Logo" mapDEFToID="true" onclick='changeTexture();' url="Logo.x3d"> </inline>
+            </scene>
+        </x3d>
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This source code based on work of tumblr user jmeyersuniverse
+% This source code based on work of Josh Meyer
+% https://www.facebook.com/JoshuaEMeyer
+% who wrote an article about imaging a Klein bottle with MathLab
 % http://jmeyersuniverse.tumblr.com/post/96146559649/imaging-a-klein-bottle-with-matlab
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
